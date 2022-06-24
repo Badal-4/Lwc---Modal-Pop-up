@@ -1,0 +1,14 @@
+/*.fieldClass {
+    width : -webkit-fill-available;
+    padding : 1%;
+}*/
+.slds-form-element__label {
+    font-weight: 700;
+    color: #a9a9a9;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.user-approval-modal .slds-modal__content {
+    padding: 1rem;
+    text-align: left;
+}
