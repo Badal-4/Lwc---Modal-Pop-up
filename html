@@ -1,0 +1,115 @@
+<template>
+    <div class="modals add-user-modal on-board-process-form">
+         <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open user-approval-modal slds-modal_large ">
+             <div class="slds-modal__container activation-link-popup maxWidth ">
+                 <header class="slds-modal__header modalHeaderStyle" >
+                     <lightning-button-icon icon-name="utility:close" onclick={closebutton} variant="bare-inverse"
+                     class="slds-modal__close"></lightning-button-icon>
+                     <div class="slds-text-heading_medium slds-text-heading--medium" style="padding:10px 0">
+                        <h1 style="text-align:center;">Edit Account</h1>
+                        </div>
+                 </header>
+                 <div class="slds-modal__content slds-p-around_medium modalHeightAccEdit" >   
+                         <lightning-record-edit-form record-id={recordId} 
+                                                     onsuccess={savebutton}
+                                                     object-api-name="Account"
+                                                     onerror={errorButton}>
+     
+ 
+                             <lightning-messages>
+                             </lightning-messages>
+                             
+                             
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-6 col-12">
+                                    <lightning-layout-item class="fieldClass">
+                                        <abbr  style="text-decoration: none;" title="required" class="slds-required">*</abbr>
+                                        <label class="slds-form-element__label"
+                                          >Institution</label >
+                                           
+                                            <lightning-input-field field-name="Name"
+                                                                    variant="label-hidden"
+                                                                    required="true" >
+                                            </lightning-input-field>
+                                          
+                                            
+                                            <label class="slds-form-element__label">Postal Code</label>
+                                        <lightning-input-field field-name="Pin_Code__c"
+                                                               variant="label-hidden">
+                                        </lightning-input-field>
+                                           
+                                        
+                                            <label class="slds-form-element__label">Direct Line</label>
+                                        <lightning-input-field field-name="Phone"
+                                        variant="label-hidden">
+                                      </lightning-input-field>
+                                    </lightning-layout-item>
+                                </div>
+                                
+
+                               
+                                <div class="col-lg-4 col-sm-6 col-12">
+                                    <lightning-layout-item class="fieldClass">
+                                        <label class="slds-form-element__label">Street and Number</label>
+                                            <lightning-input-field field-name="Street_Address__c"
+                                                                    variant="label-hidden">
+                                            </lightning-input-field>
+
+                                        <label class="slds-form-element__label">State</label>
+                                           <lightning-input-field field-name="State__c"
+                                                                   variant="label-hidden">
+                                    </lightning-input-field>
+                                           
+                                           
+                                            <label class="slds-form-element__label">Website</label>
+                                           <lightning-input-field field-name="Website__c"
+                                                                   variant="label-hidden">
+                                    </lightning-input-field>
+                                    </lightning-layout-item>
+                                </div>
+                                   
+
+                                   
+                                <div class="col-lg-4 col-sm-6 col-12">
+                                    <lightning-layout-item class="fieldClass">
+                                        <label class="slds-form-element__label">City</label>
+                                            <lightning-input-field field-name="City__c"
+                                            variant="label-hidden">
+                                            </lightning-input-field>
+
+
+                                            <label class="slds-form-element__label">Country</label>
+                                            <lightning-input-field field-name="Country__c"
+                                                                    variant="label-hidden">
+                                            </lightning-input-field>
+                                           
+                                            
+                                    </lightning-layout-item>
+                                </div>
+                                </div>
+                
+                            <center>
+                                <lightning-button
+                                class="btn slds-m-left_xx-small  leftButtonSmallLWC"
+                                variant="brand"     
+                                label="Cancel"
+                                onclick={closebutton}>
+                            </lightning-button>
+                           
+                                <lightning-button
+                                    class="btn rightButtonSmallLWC"
+                                    variant="brand"
+                                    type="submit"
+                                    name="update"
+                                    label="Save">
+                                </lightning-button>
+
+                                </center>
+                                
+                     </lightning-record-edit-form>
+                 </div>
+             </div>
+         </section>
+         <div class="slds-backdrop slds-backdrop_open"></div>
+     </div>
+ </template>
